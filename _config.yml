@@ -1,12 +1,14 @@
----
-server: false
-
-markdown: kramdown
-
-pygments: true
+url: http://brixen.io
 permalink: /:categories/:year/:i_month/:i_day/:title
-
-exclude: _drafts
-
-host: http://brixen.io
----
+safe: true
+lsi: false
+source: .
+destination: ./public
+exclude:
+  - CNAME
+  - .gitignore
+  - ./public
+  - ./stylesheets/*.scss
+markdown: rdiscount
+pygments: false
+port: 9876
